@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title></title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react-dom.js"></script>
+		<script src="jeri.js"></script>
+	</head>
+	<body>
+	<p>Comparing images</p>
+	
+	<div style="width: 600px; height: 600px;">
+
+		<div id="my-viewer" style="width: 600px; height: 600px;"></div>
+	</div>
+	<script> 
+
+		const data = {
+		  title: 'root',
+		  children: [
+		    {  
+		      title: 'Max',
+		      image: 'images/box/max.exr',
+		    },
+		    {
+		      title: 'Current',
+		      image: 'images/box/current_render.0000.exr',
+		    },
+		  ]
+		};
+		
+		// Call renderViewer as often as you want, any time the data changes
+		// Updates are cheap, efficient, and state is preserved
+		Jeri.renderViewer(document.getElementById('my-viewer'), data);
+	</script>
+	</body> 
+</html>	
