@@ -10,11 +10,30 @@
 	<ol>
 		<li>Current method, baked subdiv from blender</li>
 		<li>Vrmesh converted from vrscene generated from method 1</li>
-		<li></li>
+		<li>Alembic file exported from blender with osd properties</li>
+		<li>Vrscene generated from blender w/o baking the geometry (fbx-spliter) with osd properties</li>
+		<li>Vrscene generated from blender w/o baking the geometry (fbx-spliter) rendered with GeomStaticSmoothedMesh node</li>
+		<li>Vrscene generated from max with osd properties</li>
+		<li>Rendered inside 3ds max with openSubDiv modifier applied</li>
 	</ol>
-	
+
+	<p>Notes:</p>
 	<ul>
-		<li><a href="box.html">Box</a></li>
+		<li>Number 7 is for reference only</li>
+		<li>Number 5 is showing worst results in the Box test, it seems is not using the OSD algorithm for subdivinding the surface, although UV looks fine, and in some of the other examples the difference in geometry is not that huge</li>
+		<li>There is no difference between the current method (1) and the vrmesh method (2) so one of these is redundant</li>
+		<li>Number 4, vrscene generated from fbx-splitter. This is showing UV distortion on some models, while a vrscene converted from max (6) does not have those issues</li>
+		<li>So far (3) and (6) have the most promissing results</li>
+	</ul>
+	
+	<h3>Examples</h3>
+	<p>Click on some of the links and it will open in new tab. Once there you can press a number to switch to an image</p>
+	<ul>
+		<li><a href="box.html" target="_blank">Box</a></li>
+		<li><a href="berin.html" target="_blank">Berin</a></li>
+		<li><a href="chair.html" target="_blank">Chair</a></li>
+		<li><a href="rose_chair_mgbw.html" target="_blank">Rose Chair</a></li>
+		<li><a href="jefferson_sofa.html" target="_blank">Jefferson Sofa</a></li>
 	</ul>
 	
 	</body>
