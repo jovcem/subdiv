@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title></title>
+		<title>View</title>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react-dom.js"></script>
 		<script src="jeri.js"></script>
@@ -8,38 +8,41 @@
 	<body>
 	
 	<div id="my-viewer" style="width: 600px; height: 600px;"></div>
-	<script> 
+	<script>  
+		let params = new URLSearchParams(new URL(window.location.href).search); 
+		const testName = params.get('name');
+		document.title = testName;
 
 		const data = {
 		  title: 'root',
 		  children: [ 
 		    {
 		      title: 'Current',
-		      image: 'images/barcelona/current_render.0000.exr',
+		      image: 'images/'+testName+'/current_render.0000.exr',
 		    },
 		    {  
 		      title: 'Vrmesh',
-		      image: 'images/barcelona/current_vrmesh_render.0000.exr',
+		      image: 'images/'+testName+'/current_vrmesh_render.0000.exr',
 		    },
 		    {
 		      title: 'Alembic',
-		      image: 'images/barcelona/abc_render.0000.exr',
+		      image: 'images/'+testName+'/abc_render.0000.exr',
 		    },
 		    {  
 		      title: 'fbx-splitter OSD',
-		      image: 'images/barcelona/osdProps_render.0000.exr',
+		      image: 'images/'+testName+'/osdProps_render.0000.exr',
 		    },
 		    {
 		      title: 'fbx-splitter GeomStaticSmoothedMesh',
-		      image: 'images/barcelona/smoothedMesh_render.0000.exr',
+		      image: 'images/'+testName+'/smoothedMesh_render.0000.exr',
 		    },
 		    {  
 		      title: 'Vrscene from Max OSD',
-		      image: 'images/barcelona/vrscene_from_max.exr',
+		      image: 'images/'+testName+'/vrscene_from_max.exr',
 		    },
 		    {
 		      title: '3ds Max',
-		      image: 'images/barcelona/max.exr',
+		      image: 'images/'+testName+'/max.exr',
 		    }
 		  ]
 		};
